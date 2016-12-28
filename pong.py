@@ -35,8 +35,9 @@ ball_x = WIDTH / 2
 ball_y = HEIGHT / 2
 
 # ball speed
-ball_speed_x = random.randint(2, 4)
-ball_speed_y = random.randint(2, 4)
+ball_speed_x = random.randint(-4, 4)
+ball_speed_y = random.randint(-4, 4)
+
 
 # Left and right score 
 left_score  = 0
@@ -131,7 +132,12 @@ while True:
 		ball_x = WIDTH / 2
 		ball_y = HEIGHT / 2
 
-		ball_speed_x = random.randint(2, 4)
-		ball_speed_y = random.randint(2, 4)
+		while True:
+			ball_speed_x = random.randint(-4, 4)
+			ball_speed_y = random.randint(-4, 4)
+			if ball_speed_x != 0:
+				break
+				
+				
 
 	pygame.display.update()
